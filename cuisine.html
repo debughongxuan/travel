@@ -1,0 +1,359 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Warna Malaysia | Cuisine - Sensory Editorial</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#758fd2",
+                    "surface-container-low": "#eff4ff",
+                    "on-primary-fixed": "#001946",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "outline": "#747781",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "inverse-primary": "#b1c5ff",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#282a2a",
+                    "on-primary-fixed-variant": "#284482",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "secondary": "#775a19",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#213145",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#ffdea5",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-tertiary-container": "#909191",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-background": "#0b1c30",
+                    "on-secondary-container": "#785a1a",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary-fixed": "#dae2ff",
+                    "surface-container": "#e5eeff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-fixed": "#261900",
+                    "tertiary": "#131616",
+                    "on-surface-variant": "#444650",
+                    "secondary-container": "#fed488",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "section-gap-mobile": "40px",
+                    "container-max": "1280px",
+                    "grid-gutter": "24px",
+                    "grid-margin": "24px",
+                    "section-gap-desktop": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-md": ["Open Sans"],
+                    "label-sm": ["Open Sans"],
+                    "body-lg": ["Open Sans"],
+                    "body-md": ["Open Sans"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .dark .glass-panel {
+            background: rgba(29, 31, 31, 0.8);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 19, 58, 0.4), rgba(0, 19, 58, 0.8));
+        }
+        .image-zoom:hover img {
+            transform: scale(1.05);
+        }
+        .transition-slow {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl shadow-sm h-20">
+<div class="flex justify-between items-center w-full px-grid-margin max-w-container-max mx-auto h-full">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">Warna Malaysia</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="index.html">Explore</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="culture.html">Culture</a>
+  <a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="crafts.html" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; color: rgb(68, 70, 80); --tw-text-opacity: 1;"> Crafts</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1" href="cuisine.html">Cuisine</a>
+
+
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all active:opacity-80">Sign In</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="The Alchemy of Flavor - Spices Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLue-hsEXbyu2UWzfGTxT0jpQMuJv9jf9Kgh2Q6PxZnPX1cRrDE2L8arumVIbNYCltK7AlpwEUA8iNLNd93cfpQ5LjwAw6F048Ru4_dB5EhzPxJfE34wyQaHTan4Y3jjUZfpqzP6El1FGHgqkKQ0JDNjE80TtNqD82WyDEiGKHXW_w89WyZLcFq3wZpC0mJJOu_t9MsqG1ljzbjyJwuLeDuutwuoMMAXjn2d4oIqx6zhMl6WNni7gaVHmRE">
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-grid-margin max-w-container-max mx-auto text-center md:text-left">
+<div class="max-w-3xl">
+<p class="font-label-md text-label-md text-secondary-fixed mb-4 tracking-[0.2em] uppercase">Culinary Editorial</p>
+<h1 class="font-display-lg text-[48px] md:text-display-lg text-on-primary mb-6 leading-tight">The Alchemy of <br><span class="text-secondary-fixed italic font-normal">Flavor</span></h1>
+<p class="font-body-lg text-body-lg text-on-primary/90 mb-10 max-w-xl">A sensory exploration through Malaysia's rich tapestry of spices, where tradition meets the contemporary plate.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary text-white px-8 py-4 rounded-lg font-label-md text-label-md flex items-center justify-center gap-2 hover:scale-105 transition-transform">
+                        Explore Recipes <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-on-primary text-3xl">expand_more</span>
+</div>
+</header>
+<!-- Story Section: Peranakan Flavors -->
+<section class="py-section-gap-desktop bg-surface px-grid-margin">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter items-center">
+<div class="md:col-span-6 relative overflow-hidden rounded-xl shadow-2xl image-zoom aspect-[4/5]">
+<img alt="A vibrant bowl of Peranakan Laksa" class="w-full h-full object-cover transition-slow" src="https://lh3.googleusercontent.com/aida/AP1WRLu2Q5R25RsynvnF1yeRN3lJFchv9ARE5bc2h3ODFgm6p8KGHbEICqMiHWxccoNM58UMSvT7YKdzfMo7y5FSUgE9punHrSsLclOXl5YT5xQN8oim8oyqO0vWkJMDJsSwzsqYSph-h7Xo6UiKp7XrfvfSVs2P1h7JbPB8l5Uri-wBmN09MKy8xdgIzpuAhTJLOlyvRNJ2epvAD-GdxO0DZ7mlB1Sl9l0jtTJ0qM7U_M0yqT23kxJsaQpjcpM">
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<span class="text-white font-label-sm text-label-sm bg-secondary px-3 py-1 rounded-full">Signature Dish</span>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 py-10">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">A Legacy of Fusion: <br><span class="text-secondary">Peranakan Heritage</span></h2>
+<div class="w-20 h-1 bg-secondary mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        The Peranakan, or Straits Chinese, culture represents one of the world's most sophisticated culinary syntheses. Born from the marriage of Chinese migration and Malay ingredients, Nyonya cuisine is a labor of love that demands patience and precision.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Central to this is the 'Rempah'—a complex paste of spices pounded in a stone mortar. From the tang of tamarind to the creamy luxury of coconut milk, every bowl of Laksa tells a story of identity and resilience.
+                    </p>
+<button class="border-2 border-secondary text-secondary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-secondary hover:text-white transition-all">Read the full story</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Ritual: Teh Tarik -->
+<section class="relative py-32 bg-primary overflow-hidden">
+<div class="absolute inset-0 opacity-40">
+<img alt="The art of pouring Teh Tarik" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida/AP1WRLumazIwbF3-QIGD1ZB1qT61pyfb9iFXuZfIzsv-kSuiIxq6cvMzTebMb4-H-qpCLFmg7z_PMsEkZyR4C2LxUOvypSuqhLDbCF2jGUTCrVSHZuWx6S8_ARbHmCNBxXGEnRb0TPf1_wspxd-rzSuFQh1vc8zHCepoPzD9VU9f9RLpVnREehaxAKLNF0g0_dkv3pWqzKDCB67OBjmldO2sitEYyzW9WVvos2_NfOJIfJr8RDVFYBJDDnEyBps">
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-grid-margin">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-[40px] md:text-display-lg text-on-primary mb-8">The Art of <br><span class="text-secondary-fixed">Teh Tarik</span></h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-8 italic border-l-4 border-secondary-fixed pl-6">
+                    "Pulled tea is more than a beverage; it is a performance of gravity and grace that aerates the soul of Malaysian mornings."
+                </p>
+<p class="font-body-md text-body-md text-on-primary/70 mb-10 leading-relaxed">
+                    Witness the rhythmic exchange between two tin mugs, creating a frothy, velvety texture that defines the Mamak stall experience. This daily ritual is the heartbeat of local socialization, a unifying thread across generations.
+                </p>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-secondary-fixed">95%</span>
+<span class="font-label-sm text-label-sm text-on-primary/60 uppercase tracking-widest">Local Preference</span>
+</div>
+<div class="w-px h-12 bg-on-primary/20"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-secondary-fixed">100cm</span>
+<span class="font-label-sm text-label-sm text-on-primary/60 uppercase tracking-widest">Typical Pull Distance</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Culinary Heritage Map (Bento Style) -->
+<section class="py-section-gap-desktop bg-surface-container-low px-grid-margin">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Spice Cartography</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Tracing the origins of the essential flavors that define the Malaysian palate.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Bento Item 1 -->
+<div class="md:col-span-2 md:row-span-2 glass-panel p-10 rounded-2xl shadow-sm flex flex-col justify-between border border-white/40">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="restaurant">restaurant</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Galangal &amp; Lemongrass</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The aromatic foundations of the North. Essential for Kedah Laksa and the sharp, citrusy notes of Tom Yum influenced dishes.</p>
+</div>
+<div class="mt-10">
+<span class="text-label-sm font-label-sm text-secondary-fixed-dim bg-secondary px-4 py-2 rounded-full">Origin: Southeast Asia</span>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="glass-panel p-8 rounded-2xl shadow-sm border border-white/40">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Turmeric</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">The Golden Hue</p>
+<p class="font-body-sm text-body-md text-on-surface-variant">Providing the earthy base and vibrant color for Rendang and Nasi Kunyit.</p>
+</div>
+<!-- Bento Item 3 -->
+<div class="glass-panel p-8 rounded-2xl shadow-sm border border-white/40">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Star Anise</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Aromatic Spice</p>
+<p class="font-body-sm text-body-md text-on-surface-variant">A cornerstone of 'Empat Sekawan' (The Four Friends) spice blend.</p>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-2 glass-panel p-8 rounded-2xl shadow-sm flex items-center justify-between border border-white/40">
+<div class="max-w-xs">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Chili Padi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The explosive heat that characterizes the bold spirit of Malay street food.</p>
+</div>
+<span class="material-symbols-outlined text-error text-5xl opacity-30" data-icon="local_fire_department">local_fire_department</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Journey: Street Food Gallery -->
+<section class="py-section-gap-desktop bg-surface overflow-hidden">
+<div class="max-w-container-max mx-auto px-grid-margin mb-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<p class="font-label-md text-label-md text-secondary mb-2 tracking-widest uppercase">Visual Journey</p>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Night Market Pulse</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-grid-gutter px-grid-margin overflow-x-auto pb-10 no-scrollbar snap-x">
+<!-- Gallery Item 1 -->
+<div class="min-w-[300px] md:min-w-[450px] snap-start">
+<div class="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-lg image-zoom group">
+<img alt="Grilled Satay with peanut sauce at a night market" class="w-full h-full object-cover transition-slow" src="https://lh3.googleusercontent.com/aida/AP1WRLvGDlqb5h-0X1r8wNJWvZhBalhZFcTRhFFoG8Nqh3d_ySnEBwfmyR2lIUgMQ1h96ZNbObIOrm9EZOAISXNx2l78fjr7QN4p76KNvUGDf6W0tKq4q522FxwUY6CeVNxYAELiYnx49V92X8EJbrUl0RIv_L8x7MnXdbODxT_2NU4oy83I4yTP9Y1_3mnWXcPunOi2EQXVhH2URGjd-obt17GX9KtXCKfzwL_VbA8lU6F0TRjqeOj2Oa9O7g">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 glass-panel translate-y-2 group-hover:translate-y-0 transition-transform">
+<h4 class="font-headline-md text-headline-md text-primary">Satay Celup</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Malacca Speciality</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="min-w-[300px] md:min-w-[450px] snap-start">
+<div class="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-lg image-zoom group">
+<img alt="Fresh ingredients at a market" class="w-full h-full object-cover transition-slow" data-alt="A macro close-up of a colorful Malaysian vegetable platter at a night market, showcasing vibrant greens, red chilies, and diverse textures. The lighting is warm and incandescent, typical of street food stalls, creating a cozy and inviting atmosphere. The composition emphasizes the freshness and variety of local produce in a light-mode, high-end photography style." src="https://lh3.googleusercontent.com/aida/AP1WRLvqMskk7zWtZDntjpJQ4ckTdDslGEm3dUCnGAEMXu8DZa3yxjaW4lB8Q5Mu9R1Ik4tqVqtHw-3BZqRic9JPAmcDp4XSCXpaytGE2KvJ26t0CxIbYHcAZYVEIH_PsAOOyq3V-Yzvsx7ZwRSr_1jAOVFS29_E537lEqw1ovg1ZMX8wpl-zGkEpOA-cCQ7t2EOFruxQYC13huFvk8fZTGIe5vuJOHuzuxQVM9U76Wn39a6K1flK-zwx6b9ng">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 glass-panel translate-y-2 group-hover:translate-y-0 transition-transform">
+<h4 class="font-headline-md text-headline-md text-primary">Ulam-Ulaman</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Traditional Herb Salad</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="min-w-[300px] md:min-w-[450px] snap-start">
+<div class="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-lg image-zoom group">
+<img alt="Bustling street food alley" class="w-full h-full object-cover transition-slow" data-alt="A wide-angle shot of a bustling Malaysian street food alley at dusk. Steam rises from various stalls, illuminated by glowing warm lanterns and neon signs. The scene is filled with people and a sense of vibrant urban energy. The color palette is rich with deep blues of the twilight sky contrasting against the warm golds and oranges of the food stalls, maintaining a professional editorial aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLu6auaqPpvEhOV0QAXLp36sXP6_cEd0Ql1seBdpUDbvmKUTiW_m2D6FoxBZSZ5m9Gx_a1JL5NZl43n1pu-aO5oVaBGU4cjUxo8zxFM7wt8WSBpV79x3PSngUyg1EAwYQd07vrKVSV1JBF0cAR7YbIaJ8WEH2LTiUc-8ScsI-ao4H1v6GUTRfrvuMzox7_zRw83GIe3huW7Nt-9Tkeqa4yLGICewDwX-ydHJCEMS4_KCJouepWXwDc3x_VA">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 glass-panel translate-y-2 group-hover:translate-y-0 transition-transform">
+<h4 class="font-headline-md text-headline-md text-primary">Jalan Alor</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Kuala Lumpur Food Heartbeat</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary w-full">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap-desktop px-grid-margin max-w-container-max mx-auto">
+<div class="mb-10 md:mb-0">
+<span class="font-headline-md text-headline-md font-bold text-on-primary dark:text-on-primary-container block mb-4">Warna Malaysia</span>
+<p class="font-body-md text-body-md text-on-primary/60 max-w-xs">Preserving the vibrant colors and flavors of Malaysian heritage for the global traveler.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md text-secondary-fixed">Discover</h5>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md text-secondary-fixed">Connect</h5>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Heritage Partners</a>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/10 py-8 px-grid-margin">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-primary/40">© 2024 Warna Malaysia. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="material-symbols-outlined text-on-primary/40 hover:text-on-primary transition-colors" href="#">share</a>
+<a class="material-symbols-outlined text-on-primary/40 hover:text-on-primary transition-colors" href="#">language</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Atmospheric parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('header img');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+    </script>
+
+
+
+
+</body></html>
