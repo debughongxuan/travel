@@ -1,0 +1,465 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Cultural Heritage | Warna Malaysia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #785a1a 0%, #ffdea5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #785a1a;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-high": "#dce9ff",
+                        "inverse-surface": "#213145",
+                        "tertiary-container": "#282a2a",
+                        "surface-container": "#e5eeff",
+                        "secondary-container": "#fed488",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-low": "#eff4ff",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed": "#001946",
+                        "on-secondary-container": "#785a1a",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#261900",
+                        "background": "#f8f9ff",
+                        "primary-container": "#002663",
+                        "surface-variant": "#d3e4fe",
+                        "on-tertiary-container": "#909191",
+                        "on-surface": "#0b1c30",
+                        "on-primary-container": "#758fd2",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b1c5ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#425c9b",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed-variant": "#284482",
+                        "outline": "#747781",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffdea5",
+                        "primary": "#00133a",
+                        "on-surface-variant": "#444650",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary": "#131616",
+                        "secondary": "#775a19",
+                        "outline-variant": "#c4c6d1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "40px",
+                        "grid-margin": "24px",
+                        "section-gap-desktop": "80px",
+                        "grid-gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Open Sans"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Open Sans"],
+                        "headline-md": ["Montserrat"],
+                        "label-md": ["Open Sans"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Open Sans"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-sm">
+<nav class="flex justify-between items-center h-20 px-grid-margin max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Warna Malaysia</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="index.html">Explore</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-label-md text-label-md" href="culture.html">Culture</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="crafts.html">Crafts</a>
+
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="cuisine.html">Cuisine</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-80 transition-opacity active:scale-95 duration-150">Book Tour</button>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Festive Malaysia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtnBxUqnr9PXkODqgbg2kiVW3hXvFeKyl553b1ijIR8IzLt0lth8NQp6r5F9VWTfifJ1PyF4j9Xehmp0GjT5SUEaGp7CTudOumnZGKRg26nzoL_Tk8B3goczs9FKqgtV5keuxF9huTo903kUWaVHiSjbaDuaQNFqxMtntQpdUfF5yk3IMsIAcsygwOmic_x-nyO50G4KnNS-F81T-VQhBoC-UhJ6deZtPs4GTpdX-38dRyZGv4a7wZz3Q">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-grid-margin max-w-4xl">
+<span class="font-label-md text-label-md text-secondary-fixed bg-primary-container/30 px-4 py-1 rounded-full mb-6 inline-block uppercase tracking-widest">Heritage &amp; Culture</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6">Discovery the Soul of Malaysia</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl mx-auto">An interactive journey through centuries of tradition, artistry, and harmony. Experience the vibrant colors of our shared identity.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-3 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="map">map</span> Start the Map
+                    </button>
+</div>
+</div>
+</section>
+<!-- Interactive Map Section -->
+<section class="py-section-gap-desktop px-grid-margin max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Interactive Discovery</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Explore the diverse cultural landscapes across the peninsula and Borneo. Hover over regions to reveal their unique heritage stories.</p>
+</div>
+<div class="relative bg-surface-container rounded-[2rem] p-12 overflow-hidden shadow-sm group">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(#775a19 1px, transparent 1px); background-size: 32px 32px;"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-8 flex justify-center">
+<!-- Simplified Malaysia Map Representation -->
+<div class="relative w-full aspect-[2/1] bg-primary-container/5 rounded-2xl flex items-center justify-center">
+<img class="w-full h-full object-contain opacity-80" data-alt="A stylized, minimalist vector-style map of Malaysia presented on a clean digital surface. The map features subtle gold highlights on key cultural regions like Penang, Malacca, and Sarawak. The background is a soft ivory, consistent with a high-end travel platform. The overall lighting is soft and ambient, creating a professional and inviting cartographic display." data-location="Malaysia" src="https://lh3.googleusercontent.com/aida/AP1WRLsiyqAY3mtOZs9Uv-lp3TzrKWmov_oaD_tWR4QVaJF9Lu_vXhobnetk09MJMA1K4Y-IvQeHZsfnj9VRJWlU5Mk8RqmLEf8UhY-btgZoRbO_rbvf_g-0A0JkJ82r_bJa1xOHR_uzgBsgMBwUPv_dG08r8U7kAkaStqdKDqKl4ay43xrKqfGfiOS9jB7Tk_rg2tpBLfmWVHDELPfqKhOBN-wXDxjhYH2IOkELdRERrIpHCTxFd-z2cvhVRA">
+<!-- Interactive Pins -->
+<button class="absolute top-1/4 left-1/4 group/pin">
+<span class="material-symbols-outlined text-secondary animate-bounce" data-icon="location_on" style="font-variation-settings: &quot;FILL&quot; 1;">location_on</span>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 glass-card p-3 rounded-xl opacity-0 group-hover/pin:opacity-100 transition-opacity w-48 shadow-xl">
+<p class="font-label-md text-label-md text-primary">Penang: Peranakan Pride</p>
+</div>
+</button>
+<button class="absolute bottom-1/3 left-1/3 group/pin">
+<span class="material-symbols-outlined text-secondary animate-bounce" data-icon="location_on" style="font-variation-settings: &quot;FILL&quot; 1;">location_on</span>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 glass-card p-3 rounded-xl opacity-0 group-hover/pin:opacity-100 transition-opacity w-48 shadow-xl">
+<p class="font-label-md text-label-md text-primary">Malacca: Ancient Port</p>
+</div>
+</button>
+<button class="absolute top-1/2 right-1/4 group/pin">
+<span class="material-symbols-outlined text-secondary animate-bounce" data-icon="location_on" style="font-variation-settings: &quot;FILL&quot; 1;">location_on</span>
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 glass-card p-3 rounded-xl opacity-0 group-hover/pin:opacity-100 transition-opacity w-48 shadow-xl">
+<p class="font-label-md text-label-md text-primary">Sarawak: Rainforest Echoes</p>
+</div>
+</button>
+</div>
+</div>
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-highest p-6 rounded-2xl border-l-4 border-secondary">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Penang Heritage</h3>
+<p class="text-on-surface-variant mb-4">A melting pot of Malay, Chinese, and Indian influences, best seen in the ornate Shophouses of George Town.</p>
+<button class="text-secondary font-label-md text-label-md flex items-center gap-1 hover:underline">Read Journey <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<div class="opacity-50 blur-[1px] grayscale">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Borneo Traditions</h3>
+<p class="text-on-surface-variant">Click a region to discover the hidden gems of East Malaysia.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stories from the Heart Section -->
+<section class="py-section-gap-desktop bg-primary text-white overflow-hidden">
+<div class="px-grid-margin max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Stories from the Heart</h2>
+<p class="text-primary-fixed-dim">Meet the keepers of the flame—artisans who have dedicated their lives to preserving Malaysian heritage through their hands and hearts.</p>
+</div>
+<button class="border border-secondary-fixed text-secondary-fixed px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-secondary-fixed/10 transition-colors">View All Stories</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Artisan Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 shadow-2xl">
+<img alt="Batik Artisan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsSmbhn7-5K7s-z1TSxAcCJPDCKgQ0S3l63Bqp41qyBApF63QIR-UiC35l48S2wplygj8e455Gccp3_Dwsv5_0-hv_HY9o10AUdxRqzxYTINO6uB1D3LE92KZU7VwbexW6zB0JAiEsdbpRLOEV998IiRKyNyWcZyAajuMPABnrimf4UuZsKJsQ_UpXXzjOPpKHP7DV7p-fyFG6P4EDJoqX2g2ixVTcbkQWBZUhqfD9oJ27jcyjVQzwtzqQ">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="w-12 h-12 bg-secondary-fixed/90 backdrop-blur rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white">The Batik Whisperer</h4>
+<p class="text-label-md text-secondary-fixed">Pak Ali | Master Painter</p>
+</div>
+</div>
+</div>
+<!-- Artisan Card 2 -->
+<div class="group cursor-pointer md:mt-12">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 shadow-2xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A portrait of an elderly Malaysian craftsman meticulously carving a traditional Wau Bulan kite. The workshop is filled with warm, golden afternoon sunlight filtering through wooden slats, illuminating dust particles in the air. The artisan's hands are weathered and experienced, showing the deep texture of a lifetime of craft. The background is filled with skeletal frames of kites and colorful paper scraps." src="https://lh3.googleusercontent.com/aida/AP1WRLvlBUTBjI2u4yL_RGqx2WKem6KeI2xbj0iCRTGF2nDWxeqwWVbuC1DuD3fCDkIjNr5bj10mnhUkK65W4Wv5hcJc3e8T0L7vJX6nOlM5yCAzzzOUJvsr9Hw-Dc_BCBMZOy-TpGmIvyVfA_5ORPS6mKD5X5-SIKjUn-jk-PsXTIRDgtjcoTFSBxRcAPlocbp3D_KqgNdM5y5mbyr2S3j_z5r7q5qiAD_Rsq_wIJIns7_SL71Qe5Jyvdplaw">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="w-12 h-12 bg-secondary-fixed/90 backdrop-blur rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white">Skybound Dreams</h4>
+<p class="text-label-md text-secondary-fixed">Mak Siti | Wau Maker</p>
+</div>
+</div>
+</div>
+<!-- Artisan Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 shadow-2xl">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic close-up of a Malaysian woodcarver's hands working on a complex, floral pattern for a traditional Malay house panel. The wood is a deep mahogany color, and the lighting is dramatic, coming from the side to highlight the relief and depth of the carving. Tiny wood shavings are visible around the chisel tip. The atmosphere is quiet, focused, and deeply artistic." src="https://lh3.googleusercontent.com/aida/AP1WRLt3rlRms6XyuY72AT4rmoaFQTtPudXNMhi-lKI5cH0_5Te6XFvLhV-qSLZ14CGWunhHxOZm85gB8zX8-UuopGvMX8_vGeX-kpcJHa7Hc8tdQIUqA_E_OAn76N1DbdZ0RXP7sASCe2o-nyLR7s8L1J3EaFyjukY0PQBJIYbT3HtwfHtKTHmmRxEziztUC9IJ03H5IQC0qgQuFz7cawfRKwkpRqaEr1VfQzsw2F2CJMgJod3oJ_EH4gZyJoE">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="w-12 h-12 bg-secondary-fixed/90 backdrop-blur rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white">Roots of Wood</h4>
+<p class="text-label-md text-secondary-fixed">Ahmad | Master Carver</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Split Screen: Wau Bulan vs Batik -->
+<section class="flex flex-col md:flex-row h-auto md:h-[90vh] overflow-hidden">
+<!-- Left: Wau Bulan -->
+<div class="flex-1 relative group overflow-hidden bg-primary">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" data-alt="A vibrant Wau Bulan traditional Malaysian kite soaring against a clear azure sky. The kite's intricate patterns of floral vine motifs in gold, red, and blue are brilliantly illuminated by the tropical sun. The kite is massive, dominating the frame, and the thin strings trailing away add a sense of movement and altitude. The aesthetic is clean, high-contrast, and celebratory." src="https://lh3.googleusercontent.com/aida/AP1WRLslvue_xM7Apor_yeHbrmTWDktTwIR0v4NrG5Ogm6-oRcx4qgCx_8KilzS0Z5RfnAM_E0uhjBA_fGm1iXYaG04acQlzcZkUi8isK6ezXEia2Z2fqBe88Gi5M80sd-RnabDz8Dnmf3jc1ADf2LIFPEL_RmAnHTIUEBgw1Oa87uv3CP82y-V3GYrYeXpKPrO1XYnDP7U6uFIscrH94snsSmx8uA7gVgRjq62euu_aTuesjn2uuv7rjxZMn3U">
+<div class="relative z-10 h-full p-12 flex flex-col justify-end text-white">
+<span class="font-label-md text-label-md text-secondary-fixed mb-2 uppercase tracking-widest">Aero-Artistry</span>
+<h2 class="font-display-lg text-display-lg mb-6">Wau Bulan</h2>
+<p class="font-body-lg text-body-lg max-w-md mb-8">The Moon Kite represents the grace of Malaysian folklore, featuring floral vine motifs called 'Awan Larat' that dance in the coastal winds.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white/10 backdrop-blur-md rounded-xl">
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase">Symmetry</p>
+<p class="text-white">Perfectly balanced bamboo frames</p>
+</div>
+<div class="p-4 bg-white/10 backdrop-blur-md rounded-xl">
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase">Patterns</p>
+<p class="text-white">Intertwining floral 'Sobok'</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Vertical Divider -->
+<div class="hidden md:flex w-px bg-secondary-fixed/30 z-20"></div>
+<!-- Right: Batik -->
+<div class="flex-1 relative group overflow-hidden bg-secondary">
+<img alt="Batik Close-up" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLsSmbhn7-5K7s-z1TSxAcCJPDCKgQ0S3l63Bqp41qyBApF63QIR-UiC35l48S2wplygj8e455Gccp3_Dwsv5_0-hv_HY9o10AUdxRqzxYTINO6uB1D3LE92KZU7VwbexW6zB0JAiEsdbpRLOEV998IiRKyNyWcZyAajuMPABnrimf4UuZsKJsQ_UpXXzjOPpKHP7DV7p-fyFG6P4EDJoqX2g2ixVTcbkQWBZUhqfD9oJ27jcyjVQzwtzqQ">
+<div class="relative z-10 h-full p-12 flex flex-col justify-end text-white">
+<span class="font-label-md text-label-md text-secondary-fixed mb-2 uppercase tracking-widest">Textile Poetry</span>
+<h2 class="font-display-lg text-display-lg mb-6">Batik</h2>
+<p class="font-body-lg text-body-lg max-w-md mb-8">A story told in wax and dye. From royal courts to daily life, Malaysian Batik is a canvas of biodiversity and vibrant expression.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white/10 backdrop-blur-md rounded-xl">
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase">Method</p>
+<p class="text-white">Canting hand-drawn precision</p>
+</div>
+<div class="p-4 bg-white/10 backdrop-blur-md rounded-xl">
+<p class="font-label-sm text-label-sm text-secondary-fixed uppercase">Dyes</p>
+<p class="text-white">Natural pigments from the earth</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sound of Malaysia Component -->
+<section class="py-section-gap-desktop bg-surface-container-low px-grid-margin">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">The Sound of Malaysia</h2>
+<p class="text-on-surface-variant">Listen to the rhythmic soul of our heritage.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Instrument 1: Gamelan -->
+<div class="bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-secondary transition-all group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary !text-lg">Malay Gamelan</h5>
+<p class="text-label-sm text-on-surface-variant uppercase">Percussion</p>
+</div>
+</div>
+<div class="bg-surface-container-high h-12 rounded-full px-4 flex items-center justify-between">
+<div class="flex gap-1 items-center">
+<div class="w-1 h-4 bg-secondary rounded-full"></div>
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+<div class="w-1 h-3 bg-secondary rounded-full"></div>
+<div class="w-1 h-5 bg-secondary rounded-full"></div>
+<div class="w-1 h-4 bg-secondary rounded-full"></div>
+</div>
+<button class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-sm" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Instrument 2: Sape -->
+<div class="bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-secondary transition-all group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary !text-lg">Orang Ulu Sape</h5>
+<p class="text-label-sm text-on-surface-variant uppercase">String</p>
+</div>
+</div>
+<div class="bg-surface-container-high h-12 rounded-full px-4 flex items-center justify-between">
+<div class="flex gap-1 items-center">
+<div class="w-1 h-3 bg-secondary rounded-full"></div>
+<div class="w-1 h-4 bg-secondary rounded-full"></div>
+<div class="w-1 h-2 bg-secondary rounded-full"></div>
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+</div>
+<button class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-sm" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Instrument 3: Kompang -->
+<div class="bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-secondary transition-all group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary !text-lg">Kompang</h5>
+<p class="text-label-sm text-on-surface-variant uppercase">Drums</p>
+</div>
+</div>
+<div class="bg-surface-container-high h-12 rounded-full px-4 flex items-center justify-between">
+<div class="flex gap-1 items-center">
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+</div>
+<button class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-sm" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Instrument 4: Erhu -->
+<div class="bg-surface p-6 rounded-2xl shadow-sm border border-outline-variant hover:border-secondary transition-all group">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary !text-lg">Chinese Erhu</h5>
+<p class="text-label-sm text-on-surface-variant uppercase">String</p>
+</div>
+</div>
+<div class="bg-surface-container-high h-12 rounded-full px-4 flex items-center justify-between">
+<div class="flex gap-1 items-center">
+<div class="w-1 h-2 bg-secondary rounded-full"></div>
+<div class="w-1 h-3 bg-secondary rounded-full"></div>
+<div class="w-1 h-4 bg-secondary rounded-full"></div>
+<div class="w-1 h-5 bg-secondary rounded-full"></div>
+</div>
+<button class="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-sm" data-icon="play_arrow" style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-section-gap-desktop px-grid-margin text-center">
+<div class="max-w-4xl mx-auto bg-primary-container p-12 rounded-[2.5rem] relative overflow-hidden">
+<div class="absolute inset-0 opacity-20" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLtnBxUqnr9PXkODqgbg2kiVW3hXvFeKyl553b1ijIR8IzLt0lth8NQp6r5F9VWTfifJ1PyF4j9Xehmp0GjT5SUEaGp7CTudOumnZGKRg26nzoL_Tk8B3goczs9FKqgtV5keuxF9huTo903kUWaVHiSjbaDuaQNFqxMtntQpdUfF5yk3IMsIAcsygwOmic_x-nyO50G4KnNS-F81T-VQhBoC-UhJ6deZtPs4GTpdX-38dRyZGv4a7wZz3Q&quot;); background-size: cover; background-position: center center; filter: grayscale(100%) brightness(0.5);"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg text-white mb-6">Ready to Experience the Culture?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-10 max-w-xl mx-auto">Join our curated tours and meet the artisans in person. Learn the crafts that define a nation.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-xl font-label-md text-label-md hover:scale-105 transition-transform shadow-lg">Book a Heritage Tour</button>
+<button class="border-2 border-white text-white px-10 py-4 rounded-xl font-label-md text-label-md hover:bg-white/10 transition-colors">Download Cultural Guide</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-primary w-full py-12 mt-section-gap-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center px-grid-margin gap-base max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-secondary-fixed">Warna Malaysia</div>
+<div class="flex flex-wrap justify-center gap-8 my-6 md:my-0">
+<a class="text-inverse-on-surface/70 hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-inverse-on-surface/70 hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Terms of Service</a>
+<a class="text-inverse-on-surface/70 hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Contact Us</a>
+<a class="text-inverse-on-surface/70 hover:text-secondary-fixed transition-colors font-label-sm text-label-sm" href="#">Cultural Guidelines</a>
+</div>
+<p class="text-inverse-on-surface/70 font-label-sm text-label-sm text-center md:text-right">© 2024 Warna Malaysia Photography. Celebrating Heritage through the Lens.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for map pins
+        const pins = document.querySelectorAll('.group/pin');
+        pins.forEach(pin => {
+            pin.addEventListener('click', () => {
+                const title = pin.querySelector('.font-label-md').innerText;
+                const infoPanel = document.querySelector('.lg\\:col-span-4 .bg-surface-container-highest');
+                const head = infoPanel.querySelector('h3');
+                const desc = infoPanel.querySelector('p');
+                
+                // Simple state change animation
+                infoPanel.style.opacity = '0';
+                setTimeout(() => {
+                    head.innerText = title;
+                    desc.innerText = "Exploring the deep history of " + title + ". This region is known for its incredible resilience and stunning traditional crafts passed down through generations.";
+                    infoPanel.style.opacity = '1';
+                }, 200);
+            });
+        });
+    </script>
+
+
+
+
+</body></html>
