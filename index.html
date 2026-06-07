@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MalaysiaPhotoApp - Tropical Modernism</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#d3e4fe",
+                    "secondary-fixed-dim": "#e9c176",
+                    "secondary-fixed": "#ffdea5",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-primary": "#b1c5ff",
+                    "secondary-container": "#fed488",
+                    "surface": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary": "#131616",
+                    "on-primary-container": "#758fd2",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-bright": "#f8f9ff",
+                    "on-surface-variant": "#444650",
+                    "surface-tint": "#425c9b",
+                    "primary-fixed": "#dae2ff",
+                    "surface-container-high": "#dce9ff",
+                    "outline": "#747781",
+                    "surface-container": "#e5eeff",
+                    "inverse-surface": "#213145",
+                    "outline-variant": "#c4c6d1",
+                    "primary-container": "#002663",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#001946",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-primary": "#ffffff",
+                    "secondary": "#775a19",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "on-primary-fixed-variant": "#284482",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-container": "#785a1a",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6",
+                    "primary": "#00133a",
+                    "background": "#f8f9ff",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-container": "#909191",
+                    "error": "#ba1a1a",
+                    "on-background": "#0b1c30",
+                    "tertiary-container": "#282a2a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "grid-margin": "24px",
+                    "base": "8px",
+                    "grid-gutter": "24px",
+                    "section-gap-mobile": "40px",
+                    "section-gap-desktop": "80px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Open Sans"],
+                    "label-sm": ["Open Sans"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Open Sans"],
+                    "headline-lg": ["Montserrat"],
+                    "body-lg": ["Open Sans"],
+                    "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 19, 58, 0.2), rgba(0, 19, 58, 0.7));
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl shadow-sm z-50">
+<nav class="flex justify-between items-center px-grid-margin py-4 max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary cursor-pointer active:scale-95 transition-transform">Wrna Malaysia</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-secondary transition-colors duration-300" href="index.html">Explore</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300" href="culture.html">Culture</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300" href="crafts.html">Crafts</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors duration-300" href="cuisine.html">Cuisine</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-1.5 gap-2">
+<span class="material-symbols-outlined text-outline">search</span>
+<span class="text-on-surface-variant font-label-md">Search...</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:bg-primary-container transition-colors duration-300 active:scale-95">Sign In</button>
+</div>
+</nav>
+</header>
+<!-- Section 1: Hero -->
+<section class="relative h-[85vh] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Petronas Towers" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs_5AXgz10WStZ-HBeTP4IIeJbzmq1ISGoflinQUYaSgtHrXhme9V0yhfmXZgksYJ1a2FvK2_AVzs6Kl-fYKImmH6I20VRYyylveqDPfkCjmVsIr8JfnJseq82Agt0A1dJsx2CPvsGRdOnb7NJum5jjUToCptZLhPLQhDmyD3OyctdHvJHR97bV-cbEaJ4S65ezJg0AUno-FnIN3SvvCMVOMloFCnld0Odc2Ts809KUpDclXgCtjjs-grQ">
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-grid-margin w-full text-white">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg mb-4 leading-tight">Malaysia Photos</h1>
+<p class="font-body-lg text-body-lg mb-8 text-surface-variant">Everyone loves Malaysia views online! Explore the vibrant landscapes and cultural soul of Southeast Asia.</p>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">explore</span> Start Exploring
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-lg font-label-md hover:bg-white/20 transition-all">
+                        View Gallery
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Gallery -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop max-w-container-max mx-auto px-grid-margin section-fade-in visible">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<span class="text-secondary font-label-md uppercase tracking-widest mb-2 block">Visual Journey</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">See more Malaysia photos in our gallery</h2>
+</div>
+<button class="group flex items-center gap-2 text-primary font-label-md">
+                View All Photographs <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Asymmetric Bento-style Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-grid-gutter h-auto md:h-[600px]">
+<div class="md:col-span-8 relative overflow-hidden rounded-xl shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A cinematic, wide-angle shot of a traditional Malay house nestled within a lush, vibrant green tropical garden. The architecture features dark wood and intricate carvings, bathed in the soft, warm glow of late afternoon sun filtering through palm fronds. The atmosphere is peaceful and evokes a sense of tropical elegance and heritage." src="https://lh3.googleusercontent.com/aida/AP1WRLs5QlHTinDZpnjylm-cVw3erX04QaBm8eFkb1gJMEkS6rLcDvYxcSNOqXkPbuki4yxlrxf5D3ivBy4BD76KXJ3-OO8QRGjrHfgG8JhCKZvl4_pFtVEIS33mFoj211z41q_ofAaJXGD1nfBK21kXsCl810Hu0efuruYORs30gbpCZyVrLMZLCqKOsAcrajNaYK0a21u4UiwaAujcGp8RYNH5bfj2s31Tpl-mYsb8bfU8Q2F5ZisChh7h0Q">
+<div class="absolute bottom-0 left-0 right-0 p-6 glass-card border-t border-white/20 m-4 rounded-lg">
+<p class="text-primary font-label-md">Kampung Heritage</p>
+<h3 class="text-primary font-headline-md">Authentic Traditional Living</h3>
+</div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-grid-gutter">
+<div class="relative overflow-hidden rounded-xl shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A high-altitude shot of the Batu Caves temple entrance with its massive golden Murugan statue. The scene is captured in the early morning with misty mountains in the background and vibrant, colorful steps leading up the limestone hill. The lighting is ethereal and bright, emphasizing the spiritual and cultural majesty of Malaysia." src="https://lh3.googleusercontent.com/aida/AP1WRLu1tnV8XihDkEbAZd-2a63PQvqV2iLw9nMA9yCnVqYSXYoTGDkb9UcBqhzIFL59USJ1W7li4iKVzf2PFzRRzkrL0ligymui-xFNgEBKE1hy0nD3n3a9wTntAaP8k3PpF3DFemYiakhJ793TJd8b56yBpTCctuUcK-AjPt-bY5Gp1kk9kZRg6Hr00MuGhiBhWOeAPbodqYeFsQRT1hijY0MBY70Z0btBFeda8NEtakM0Fu6jGHD2MPSiG8k">
+</div>
+<div class="relative overflow-hidden rounded-xl shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up photograph of vibrant tropical flowers with dewdrops on their petals, set against a blurred background of deep green jungle foliage. The colors are rich and saturated, featuring bright pinks and oranges that pop against the cool green tones. The lighting is soft and natural, creating a serene and professional macro photography aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLteLXmlVuw9nAqS5Fa8lgxghuGVOcoFoX_RAOYtxWRFrhDY67OSqDyeAfpcNj35G01Phr2AP5hxKlmZgPVAvPVpkRrVJe5o0URZDQ7U6KYn4l13Y9Ie5jCC7wbv3RzaQx8oKuJcKv_CrQBwDM6AObMErkc3PGazn0Cdg7b-Uzi-uttQsrcOnXPLeMbGNRwfEVqrkZ7fZNAzPM5CgVEnENJM4axMoWxunCyNVoG6Qai070R8-yBrAlodRzA">
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Malaysia Lists -->
+<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop">
+<div class="max-w-container-max mx-auto px-grid-margin">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">Malaysia Lists</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Nasi Lemak -->
+<div class="flex flex-col items-center text-center section-fade-in visible">
+<div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl">
+<img alt="Nasi Lemak" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsSW3h--vEzdMsC5EGqPlOceantWIyc7kovJS-tnyCz8BnAMTvXHQa4RA9YiOMBwr59jjLowf0PJifIgF3Y-V3xx3o8zqzu2r_02bOz63HsAp8W9D8aMWVnXEHcc6IKJF1HscwzAfWAFs1LHz91yGniU0V4Vcikjt-nxOzTmBuNmGuIslzsLQDAzjx7cnogB25ohcMO2JsOkyrnjst7JbxrxZWPp-_MsoodDAoCN-OEJtADtZ0VEKyZJmw">
+</div>
+<h3 class="font-headline-md text-primary mb-2">Nasi Lemak</h3>
+<p class="text-on-surface-variant mb-4">People love nasi lemak. It's the national heartbeat of Malaysian cuisine.</p>
+<span class="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-body-lg shadow-lg shadow-purple-500/20 transition-all hover:scale-105">#FoodieHeaven</span>
+</div>
+<!-- Beautiful Islands -->
+<div class="flex flex-col items-center text-center section-fade-in visible" style="transition-delay: 200ms;">
+<div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl flex items-center justify-center bg-primary">
+<span class="material-symbols-outlined text-white text-6xl">beach_access</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2">Beautiful Islands</h3>
+<p class="text-on-surface-variant mb-4">Pristine waters from Perhentian to Sipadan offer world-class diving and relaxation.</p>
+<span class="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-body-lg shadow-lg shadow-purple-500/20 transition-all hover:scale-105">#TropicalVibes</span>
+</div>
+<!-- Friendly People -->
+<div class="flex flex-col items-center text-center section-fade-in visible" style="transition-delay: 400ms;">
+<div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl flex items-center justify-center bg-secondary">
+<span class="material-symbols-outlined text-white text-6xl">volunteer_activism</span>
+</div>
+<h3 class="font-headline-md text-primary mb-2">Friendly People</h3>
+<p class="text-on-surface-variant mb-4">Known for the warmest smiles in Asia, Malaysian hospitality is legendary.</p>
+<span class="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-2 rounded-full font-body-lg shadow-lg shadow-purple-500/20 transition-all hover:scale-105">#VisitMalaysia</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Top 3 Famous Places -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop max-w-container-max mx-auto px-grid-margin">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12 border-l-8 border-secondary pl-6 uppercase tracking-tighter">Top 3 Famous Places</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gutter">
+<!-- Place 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-[400px] rounded-xl overflow-hidden mb-4 shadow-md transition-shadow hover:shadow-2xl">
+<img alt="Petronas Towers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLs_5AXgz10WStZ-HBeTP4IIeJbzmq1ISGoflinQUYaSgtHrXhme9V0yhfmXZgksYJ1a2FvK2_AVzs6Kl-fYKImmH6I20VRYyylveqDPfkCjmVsIr8JfnJseq82Agt0A1dJsx2CPvsGRdOnb7NJum5jjUToCptZLhPLQhDmyD3OyctdHvJHR97bV-cbEaJ4S65ezJg0AUno-FnIN3SvvCMVOMloFCnld0Odc2Ts809KUpDclXgCtjjs-grQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-white font-headline-md">Petronas Twin Towers</h4>
+<p class="text-white/80 font-label-md">Kuala Lumpur</p>
+</div>
+</div>
+</div>
+<!-- Place 2 -->
+<div class="group cursor-pointer">
+<div class="relative h-[400px] rounded-xl overflow-hidden mb-4 shadow-md transition-shadow hover:shadow-2xl">
+<img alt="Langkawi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLs6fQxckoJX01EVFTOig9v3-kR8HmE9L8QEgGB8jtYfiCIpneW7c8O2hgYgJQ-v2xcL0Ka1GJVI8dLRok3OSjU7O6Z6D5EcdPUrQtX-s3vEX92dOkg7ebUVBXE5846hh0cKeJrjVFUjkLrO4hAdBYM3e-aLIO02Kwl3BHwODXnVzXGHh5Kfs_srgs_fy6E-hIHOThBGv7zsqys6vrgEmAhLKG0E6bWQy-tfgwiDMIQJ3wvGmq7wyodPaJQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-white font-headline-md">Langkawi Archipelago</h4>
+<p class="text-white/80 font-label-md">Kedah</p>
+</div>
+</div>
+</div>
+<!-- Place 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-[400px] rounded-xl overflow-hidden mb-4 shadow-md transition-shadow hover:shadow-2xl">
+<img alt="Mount Kinabalu" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLut50um390U-C7uYAh2FgvHqRgwe6mfam5WBMzUELZQIS6jyCmx8iOtJ6pNAtJwarCiCErUzIVWN2wgPgPQRBLFdFp4Q4WSJyDfhxgymrMjisz5C9-XQYo_g_hBwcafEdNf86ItNKZwlrK9l6J4l9wpRKjaznqGC-fZgz_quuE71JCv4qtfHQKxI-SWlxgNvwiKYv8gdIib3B_G2Z96veY2p_2d3EMnZ44cUNRV4_2h7DT9PAzaFrkx0MA">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-white font-headline-md">Mount Kinabalu</h4>
+<p class="text-white/80 font-label-md">Sabah</p>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md italic mt-2">Mount Kinabalu is iconic.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Cat Form (Feedback) -->
+<section class="bg-primary text-on-primary py-section-gap-mobile md:py-section-gap-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto px-grid-margin grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="section-fade-in visible">
+<h2 class="font-display-lg text-display-lg mb-6 leading-tight">Tell Us Your Preference</h2>
+<p class="text-on-primary-container text-body-lg mb-8">We value your feedback. Help us understand what makes Malaysia special to you so we can showcase more of what you love.</p>
+<div class="flex items-center gap-4 text-secondary-fixed">
+<span class="material-symbols-outlined text-4xl">local_activity</span>
+<div>
+<p class="font-bold">Exclusive Rewards</p>
+<p class="text-label-md opacity-70">Complete the form for travel photography tips!</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 md:p-12 rounded-2xl shadow-2xl text-on-surface section-fade-in visible" style="transition-delay: 200ms;">
+<h3 class="font-headline-md mb-8 text-primary">Cat Form Feedback</h3>
+<form class="space-y-8">
+<!-- Radio Buttons -->
+<div>
+<p class="font-label-md text-primary uppercase mb-4">Which area do you like most?</p>
+<div class="flex gap-8">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline focus:ring-primary" name="area" type="radio" value="city">
+<span class="font-body-md group-hover:text-primary transition-colors">City</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline focus:ring-primary" name="area" type="radio" value="nature">
+<span class="font-body-md group-hover:text-primary transition-colors">Nature</span>
+</label>
+</div>
+</div>
+<!-- Checkboxes -->
+<div>
+<p class="font-label-md text-primary uppercase mb-4">What do you enjoy in Malaysia?</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded text-secondary border-outline focus:ring-secondary" name="enjoy" type="checkbox" value="food">
+<span class="font-body-md group-hover:text-secondary transition-colors">Food</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded text-secondary border-outline focus:ring-secondary" name="enjoy" type="checkbox" value="culture">
+<span class="font-body-md group-hover:text-secondary transition-colors">Culture</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded text-secondary border-outline focus:ring-secondary" name="enjoy" type="checkbox" value="travel">
+<span class="font-body-md group-hover:text-secondary transition-colors">Travel</span>
+</label>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md hover:bg-on-primary-fixed-variant transition-all transform active:scale-[0.98]" type="submit">Submit Feedback</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-grid-margin py-12 max-w-container-max mx-auto w-full">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<span class="font-headline-md text-headline-md font-bold text-primary block mb-2">MalaysiaPhotoApp</span>
+<p class="font-label-md text-label-md text-on-surface dark:text-on-surface-variant max-w-xs">© 2024 MalaysiaPhotoApp. Discover the Tropical Modernism.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Contact</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">FAQ</a>
+</div>
+<div class="mt-8 md:mt-0 flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary transition-colors">share</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary transition-colors">photo_camera</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for section animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade-in').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Form submission prevention for demo
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Terima Kasih! Your feedback has been received.');
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body></html>
